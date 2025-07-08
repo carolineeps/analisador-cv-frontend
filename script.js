@@ -27,7 +27,7 @@ document.getElementById('cvForm').addEventListener('submit', async function(even
     formData.append('descricao_vaga', jobDescription);
 
     try {
-        const response = await fetch('https://analisador-cv.onrender.com/analisar', {
+        const response = await fetch('https://analisador-cv-backend.onrender.com/analisar', {
             method: 'POST',
             body: formData,
         });
