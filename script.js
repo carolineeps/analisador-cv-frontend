@@ -22,8 +22,8 @@ document.getElementById('cvForm').addEventListener('submit', async function(even
     formData.append('nivel', jobLevel);
 
     try {
-        // Lembre-se de substituir esta URL pela URL do seu backend no Hugging Face
-        const response = await fetch('COLE_A_URL_DO_SEU_BACKEND_AQUI/analisar', {
+        // A URL AGORA É SIMPLESMENTE /analisar, POIS ESTÁ NO MESMO SERVIDOR
+        const response = await fetch('/analisar', {
             method: 'POST',
             body: formData,
         });
@@ -50,6 +50,8 @@ document.getElementById('cvForm').addEventListener('submit', async function(even
     }
 });
 
+// O restante da função displayReport pode continuar exatamente o mesmo da versão anterior.
+// COLE AQUI A FUNÇÃO displayReport COMPLETA da versão anterior.
 function displayReport(data, jobLevel) {
     const reportSection = document.getElementById('reportSection');
     
