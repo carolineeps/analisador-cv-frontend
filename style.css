@@ -5,27 +5,22 @@ body {
     background-color: #f8f9fa;
     color: #333;
 }
-
 header h1 {
     font-weight: 700;
 }
-
 .card {
     border: none;
     border-radius: 15px;
     background-color: #ffffff;
 }
-
 .btn-primary {
     background-color: #007bff;
     border: none;
     transition: background-color 0.3s ease;
 }
-
 .btn-primary:hover {
     background-color: #0056b3;
 }
-
 .score-circle {
     width: 150px;
     height: 150px;
@@ -39,7 +34,6 @@ header h1 {
     margin: 0 auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
 .bg-score-excelente { background-color: #28a745; }
 .bg-score-bom { background-color: #ffc107; }
 .bg-score-ruim { background-color: #dc3545; }
@@ -52,13 +46,4 @@ header h1 {
     margin: 0.2rem;
     border-radius: 20px;
     font-size: 0.9rem;
-}
-
-/* NOVO ESTILO ADICIONADO */
-.vaga-texto {
-    white-space: pre-wrap;       
-    word-wrap: break-word;      
-    max-height: 200px;
-    overflow-y: auto;
-    font-size: 0.85rem;
 }
