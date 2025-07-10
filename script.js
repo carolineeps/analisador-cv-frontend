@@ -1,11 +1,8 @@
-// frontend/script.js - VERSÃO FINAL E CORRIGIDA
-
 document.getElementById('cvForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const cvFile = document.getElementById('cvFile').files[0];
     const jobLevel = document.getElementById('jobLevel').value;
-    const jobDescription = document.getElementById('jobDescription').value;
     
     const loader = document.getElementById('loader');
     const reportSection = document.getElementById('reportSection');
@@ -23,17 +20,15 @@ document.getElementById('cvForm').addEventListener('submit', async function(even
     const formData = new FormData();
     formData.append('cv', cvFile);
     formData.append('nivel', jobLevel);
-    // Mesmo que não estejamos usando a descrição da vaga na análise, é bom enviar caso queiramos reativar no futuro.
-    formData.append('descricao_vaga', jobDescription);
 
     try {
-        const response = await fetch('https://analisador-cv-backend.onrender.com/analisar', {
+        // Lembre-se de substituir esta URL pela URL do seu backend no Hugging Face
+        const response = await fetch('COLE_A_URL_DO_SEU_BACKEND_AQUI/analisar', {
             method: 'POST',
             body: formData,
         });
 
         if (!response.ok) {
-            // Tenta ler o erro como JSON, se falhar, usa o texto puro.
             let errorMsg = 'Ocorreu um erro no servidor.';
             try {
                 const errorData = await response.json();
